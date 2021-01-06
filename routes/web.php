@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'GameController@index')->name('home');
+Route::post('/', 'GameController@startGame')->name('start_game');
+Route::get('/game', 'GameController@game')->name('game');
+Route::post('/update-game', 'GameController@updateGame')->name('update_game');
