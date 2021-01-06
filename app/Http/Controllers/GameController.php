@@ -42,7 +42,7 @@ class GameController extends Controller
 
     public function updateGame(Request $request)
     {
-        $status = true;
+        $status = false;
         $chance = 0;
         
         $card = $this->card->getRandomCard();
@@ -53,7 +53,7 @@ class GameController extends Controller
             $status = true;
         }
 
-        $chance = 99;
+        $chance = round((1/$this->card->getRemainingCardsCount())*100, 2);
 
         return response()->json([
             'status' => $status,
