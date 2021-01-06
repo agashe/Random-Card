@@ -21,4 +21,9 @@ class CardRepository implements CardRepositoryInterface
     {
         return Card::where('status', false)->inRandomOrder()->first();        
     }
+
+    public function getRemainingCardsCount()
+    {
+        return Card::where('status', false)->count();        
+    }
 }
