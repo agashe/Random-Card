@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: green;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: yellow;
+    text-shadow: 1px 1px black;
+}
+
+main {
+    min-height: 500px;
+}
+
+.menu-card {
+    height: 70px;
+    width: 50px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#select-card {
+    height: 100px;
+    width: 70px;
+}
+
+#draw-card , #preview-card {
+    height: 150px;
+    width: 100px;
+    cursor: pointer;
+}
+
+footer {
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px black;
+}
