@@ -17,11 +17,12 @@ $(document).ready(function(){
         })
         .done(function(response) {
             $('#preview-card').attr('src', response.image);
-            $('#chance').text(response.chance);
             
             if (response.status == true) {
-                $('#win').removeClass('d-none');
-                $('#win h4').text(`Got It! the chance was ${response.chance} %`);
+                $('#chance').text(`Got It! the chance was ${response.chance} %`);
+                $('#draw-card').hide();
+            } else {
+                $('#chance').text(`Chance : ${response.chance} %`);
             }
         });
     });
