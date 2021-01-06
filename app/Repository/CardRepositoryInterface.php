@@ -12,4 +12,5 @@ interface CardRepositoryInterface
     public function resetCards();
     public function getCards($id);
     public function getRandomCard();
+    public function getRemainingCardsCount();
 }
